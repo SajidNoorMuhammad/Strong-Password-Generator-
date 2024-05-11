@@ -8,23 +8,6 @@ var generatePassBtn = document.querySelector("#btn"); // Password Generator Butt
 var demo = document.getElementById("demo");
 
 
-
-// Show & Hide Password
-var showPassword = document.querySelector(".passIcon"); // Icon Container
-var passShowIcon = document.querySelector(".p-show"); // Password Show icon
-var passHideIcon = document.querySelector(".p-hidden"); // Password Hide icon
-showPassword.addEventListener("click", () => {
-  if (inputDisplay.type === "password") {
-    inputDisplay.type = "text";
-    passHideIcon.style.display = "none";
-    passShowIcon.style.display = "block";
-  } else {
-    inputDisplay.type = "password";
-    passHideIcon.style.display = "block";
-    passShowIcon.style.display = "none";
-  }
-});
-
 // Getting & Showing Input Range
 var rangeBar = document.querySelector("#rangeBar"); // Range Bar
 var showRangebarValue = document.querySelector("#rangeDisplay"); // Show Range Bar Values
@@ -48,7 +31,6 @@ clipBoard.addEventListener("click", () => {
   } else {
     empty.display = "none";
     inputDisplay.select();
-    document.execCommand("copy");
     copiedInput.style.display = "block";
     copyInput.style.display = "none";
   }
@@ -120,11 +102,7 @@ function generatePass() {
     numbersChecked.length > 0 &&
     specialCharactersChecked.length > 0
   ) {
-  //   weakPass.style.display = "none";
-  //   strongPass.style.display = "block";
-  // } else {
-  //   weakPass.style.display = "block";
-  //   strongPass.style.display = "none";
+
   }
   // Display password
   inputDisplay.value = generatePassword;
