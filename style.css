@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container {
+  width: 100%;
+}
+
+.box {
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  margin: 50px auto;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.demo-Heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#demo {
+  padding: 10px 20px;
+  border: 1px solid #ffa400;
+  background: transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.3s linear;
+}
+
+#demo:hover {
+  background-color: #ffa400;
+  color: #fff;
+}
+
+.box h1 {
+  font-size: 2.5em;
+}
+
+.display {
+  position: relative;
+}
+
+#inputDisplay {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 1px solid #ffa400;
+}
+
+.passIcon {
+  padding: 10px 15px;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+i.p-hidden {
+  display: none;
+}
+
+.dialogueBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  user-select: none;
+}
+
+.copy,
+.copied {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border: 1px solid #ffa400;
+}
+
+.copy:hover {
+  background-color: #ffa400;
+  color: #fff;
+}
+
+.copied {
+  display: none;
+}
+
+.copied:hover {
+  cursor: url("checkdouble.svg"), auto;
+}
+
+.strongPass > i {
+  color: green;
+}
+
+.strongPass,
+.weakPass,
+.empty,
+.emptyCheckBox {
+  display: none;
+}
+
+.weakPass > i {
+  color: #ff5733;
+}
+
+.empty {
+  color: red;
+}
+
+#rangeBar {
+  width: 100%;
+}
+
+span#rangeDisplay {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.checkBox-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  user-select: none;
+}
+
+.checkboxes {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxes input[type="checkbox"] {
+  margin: 0 3px 0 10px;
+}
+
+#btn {
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  border: 1px solid #ffa400;
+  font-weight: 500;
+}
+
+#btn:hover {
+  background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .box h1 {
+    font-size: 2em;
+  }
+
+  #btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .box {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #inputDisplay::placeholder {
+    font-size: 18px;
+  }
+  .checkBox-Container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  label {
+    width: max-content;
+  }
+}
